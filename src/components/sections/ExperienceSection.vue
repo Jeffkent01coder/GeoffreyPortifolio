@@ -109,9 +109,9 @@ const education = ref([
   },
   {
     period: "2024 -  Now",
-    degree: "Tech skills",
+    degree: "Certifications",
     institution: "Udemy",
-    description: "We help organizations of all types and sizes prepare for the path ahead — wherever it leads. Our curated collection of business and technical courses help ..."
+    description: "We help organizations of all types and sizes prepare for the path ahead — wherever it leads. Our curated collection of business and technical courses help companies, governments, and nonprofits build skills to succeed in today’s rapidly changing digital landscape."
   },
 ])
 

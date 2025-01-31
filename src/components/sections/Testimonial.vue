@@ -4,7 +4,7 @@
         <div class="flex flex-col md:flex-row items-start md:space-x-16">  <!-- Increased space between columns -->
           <div class="w-full md:w-1/3 mb-12 md:mb-0">  <!-- Increased bottom margin on mobile -->
             <h2 class="text-3xl font-bold text-white mb-6 text-left">Professional Recommendations</h2>  <!-- Increased margin bottom -->
-            <p class="text-gray-400 mb-8 text-left">Throughout my career, I've had the privilege of collaborating with exceptional professionals across various industries. These individuals have not only witnessed my work firsthand but have also experienced the value I bring to projects and teams. Their words reflect my commitment to excellence, innovation, and client satisfaction. I'm honored to share their recommendations, which speak to my expertise, work ethic, and the positive impact I've made in my field.</p>  <!-- Increased margin bottom -->
+            <p class="text-gray-400 mb-8 text-left">Throughout my career, I've had the opportunity to work alongside outstanding professionals from diverse industries. These colleagues have seen my work in action and experienced the contributions I bring to projects and teams. Their feedback highlights my dedication to quality, innovation, and client success. I'm grateful to share their recommendations, which showcase my expertise, strong work ethic, and the meaningful impact I've made in my field.</p>  <!-- Increased margin bottom -->
             <div class="text-left">
               <button class="bg-orange-500 hover:bg-orange-600 text-white font-bold py-3 px-8 rounded">  <!-- Increased padding -->
                 View More
@@ -17,12 +17,12 @@
               <div v-for="(testimonial, index) in testimonials" :key="index" 
                    :class="[
                      'bg-gray-800 rounded-lg shadow-md p-8 flex items-start space-x-6 relative overflow-hidden',
-                     index === 1 ? 'md:-ml-12 z-10' : '',
+                     index === 1 || index == 3 ? 'md:-ml-12 z-10' : '',
                      'w-11/12' 
                    ]">
                 <div :class="[
                   'absolute top-0 left-0 w-2 h-full',
-                  index === 1 ? 'bg-gradient-to-b from-orange-500 to-orange-600' : 'bg-gray-700'
+                  index === 1 || index == 3 ? 'bg-gradient-to-b from-orange-500 to-orange-600' : 'bg-gray-700'
                 ]"></div>
                 <svg class="absolute top-6 right-6 w-12 h-12 text-orange-500 opacity-20" viewBox="0 0 24 24" fill="currentColor">
                   <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z"/>
@@ -49,7 +49,7 @@
       name: 'Munga Fredrick',
       title: 'Software and game development instructor',
       avatar: '/images/fred.jpeg',  // Adjusted for larger image size
-      comment: "Erastus is a software developer with a difference. With a keen eye for detail and purpose, he ensures that every application he builds is both efficient and user-centric. He prioritizes **speed, accuracy, and an intuitive UI**, delivering seamless experiences across both **mobile and web applications**. By understanding customer needs, he crafts software solutions that are not only functional but also outstanding in performance and design."
+      comment: "Erastus is a software developer with a difference. With a keen eye for detail and purpose, he ensures that every application he builds is both efficient and user-centric. He prioritizes speed, accuracy, and an intuitive UI, delivering seamless experiences across both mobile and web applications. By understanding customer needs, he crafts software solutions that are not only functional but also outstanding in performance and design."
     },
     {
       name: 'Victor Ngure',
@@ -61,7 +61,7 @@
       name: 'Wachira Maina',
       title: 'Sales & Marketing Consultant',
       avatar: '/images/wachira_maina.jpg',
-      comment: "I highly recommend **Geoffrey Erastus** for his outstanding skills as a mobile app developer specializing in Kotlin, Figma and Flutter. Geoffrey consistently demonstrates a keen eye for UI design, seamless integrations, and user experience optimization. His ability to transform ideas into intuitive, high-performance applications sets him apart. He is highly professional, delivers on time, and adapts effortlessly to project requirements. His expertise in building and integrating mobile applications has significantly enhanced our digital experience. Geoffrey’s dedication to quality and innovation makes him an invaluable asset to any development team."
+      comment: "I highly recommend Geoffrey Erastus for his outstanding skills as a mobile app developer specializing in Kotlin, Figma and Flutter. Geoffrey consistently demonstrates a keen eye for UI design, seamless integrations, and user experience optimization. His ability to transform ideas into intuitive, high-performance applications sets him apart. He is highly professional, delivers on time, and adapts effortlessly to project requirements. His expertise in building and integrating mobile applications has significantly enhanced our digital experience. Geoffrey’s dedication to quality and innovation makes him an invaluable asset to any development team."
     },
     {
       name: 'Paul Njoroge',

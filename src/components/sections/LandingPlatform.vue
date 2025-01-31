@@ -49,7 +49,7 @@
       </div>
       <div class="hidden lg:block w-1/2">
         <img
-          src="/images/jedd.jpeg"
+          src="/images/ge.png"
           alt="Edward Muss"
           class="w-full h-auto object-contain"
         />
