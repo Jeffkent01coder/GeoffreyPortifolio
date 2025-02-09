@@ -121,6 +121,7 @@
                     <span class="flex-grow text-gray-400">{{ selectedProject.year }}</span>
                   </div>
                   <div class="h-px bg-gray-700 w-full"></div>
+
                   <div class="flex items-center">
                     <span class="text-gray-400">
                       <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-3" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -130,6 +131,19 @@
                     <span class="font-semibold w-20 text-gray-400">Preview:</span>
                     <a :href="selectedProject.previewUrl" class="text-orange-500 hover:underline flex-grow">
                       More Work
+                    </a>
+                  </div>
+
+                  
+                  <div class="flex items-center">
+                    <span class="text-gray-400">
+                      <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-3" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                      </svg>
+                    </span>
+                    <span class="font-semibold w-20 text-gray-400">Preview:</span>
+                    <a :href="selectedProject.polycrest" class="text-orange-500 hover:underline flex-grow">
+                      Polycrest Africa
                     </a>
                   </div>
                 </div>
@@ -156,10 +170,11 @@ const projects = ref([
     images: ['/images/sw_1.jpg', '/images/sw_2.jpg', '/images/sw_3.jpg'],
     videoUrl: null,
     fullDescription: 'This project features a sleek, minimalistic website built with Next.js and styled using Tailwind CSS, emphasizing clean aesthetics and user-friendly navigation. The site includes an integrated AI chatbot that enhances user interaction by providing real-time assistance and personalized responses. By leveraging Next.js for dynamic rendering and Tailwind CSS for a responsive layout, the website not only looks modern and inviting but also delivers a seamless and engaging user experience',
-    client: 'Stanbest Group (EA) Limited',
+    client: 'Stanbest Group (EA) Limited, Polycrest Africa, Indie Games Group Kenya',
     type: 'Sofwatware Development',
     year: '2024',
     previewUrl: 'https://github.com/Jeffkent01coder',
+    polycrest:"https://polycrest.africa/",
     quote: 'Any fool can write code that a computer can understand. Good programmers write code that humans can understand.',
     quoteAuthor: 'Martin Fowler'
   },
