@@ -69,10 +69,22 @@ const experiences = ref([
     description: "Integrating POS (Point of Sale) systems with eTIMS(Electronic Tax Invoice Management Systems) Creating RESTFUL APIs"
   },
   {
+    period: "January 2025 - Now",
+    title: "Frontend Developer and Software Development Instructor", 
+    company: "Polycrest Africa",
+    description: "Polycrest is a leading institution in Africa dedicated to fostering innovation and excellence in game design, animation, and software development. It provides aspiring developers and animators with cutting-edge skills through immersive, hands-on learning experiences, ensuring they are industry-ready."
+  },
+  {
+    period: "January 2025 - Now",
+    title: "Frontend Developer r", 
+    company: "Gametribe",
+    description: "Indie Games Groups is a community program designed to bring together indie games developers and communities for networking, knowledge sharing and year-round access to education and best practice-sharing from Google. By joining an Indie Games Group, developers and artists will be able to grow their mobile game development knowledge in a supportive learning community and tap into resources within each community to build better quality mobile games and grow on Google Play."
+  },
+  {
     period: "October 2023 - Now",
     title: "Software Engineer Volunteer", 
     company: "Inide Games Group Kenya",
-    description: "Indie Games Groups is a community program designed to bring together indie games developers and communities for networking, knowledge sharing and year-round access to education and best practice-sharing from Google. By joining an Indie Games Group, developers and artists will be able to grow their mobile game development knowledge in a supportive learning community and tap into resources within each community to build better quality mobile games and grow on Google Play."
+    description: "GameTribe is a leading e-sports and publishing company that transforms gaming into a platform for creativity, competition, and connection. As a publisher, we support developers from concept to global release, offering marketing expertise, distribution networks, and community-driven insights to maximize a game's reach and impact."
   },
   {
     period: "May 2024 - Novemeber 2024",

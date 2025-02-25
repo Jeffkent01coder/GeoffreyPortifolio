@@ -181,7 +181,7 @@ const projects = ref([
   {
     title: 'Graphics Design',
     description: 'Your brand’s personality, captured in a single, powerful logo',
-    images: ['/images/mockup_1.jpg','/images/Stanbest 25 Flier-01.jpg', '/images/mockup_2.jpg', '/images/mockup_3.jpg', '/images/mockup_4.jpg', '/images/mockup_5.jpg', '/images/mockup_6.jpg', '/images/mockup_7.jpg'],
+    images: ['/images/Stanbest Banner & Flier-01.jpg','/images/mockup_1.jpg','/images/Stanbest 25 Flier-01.jpg', '/images/mockup_2.jpg', '/images/Stanbest Banner & Flier-02.jpg','/images/mockup_3.jpg','/images/Stanbest Banner & Flier-03.jpg', '/images/mockup_4.jpg', '/images/mockup_5.jpg', '/images/mockup_6.jpg', '/images/mockup_7.jpg'],
     videoUrl: null,
     fullDescription: 'Blending creativity with purpose, our graphic design transforms visuals into compelling stories that resonate. Every color, line, and layout is thoughtfully crafted to capture attention, convey meaning, and inspire action. From branding to digital and print, we create visuals that leave a lasting impression, ensuring your message is as powerful as it is beautiful.',
     client: 'Stancap Enterprises, Stanbest Group(EA) Limited ',
