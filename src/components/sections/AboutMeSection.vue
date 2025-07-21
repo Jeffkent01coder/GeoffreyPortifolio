@@ -5,7 +5,7 @@
         <div class="col-span-1 lg:col-span-2">
           <img
             src="/images/ge.png"
-            alt="jeff"
+            alt="Geoffrey Erastus - Fullstack Software Engineer"
             class="w-full rounded-lg shadow-lg mb-6 transition-all duration-300 ease-in-out"
             :class="{ 'lg:h-[700px] lg:object-cover': showAllSkills }"
           />

@@ -63,46 +63,46 @@ import { ref, computed } from 'vue'
 
 const experiences = ref([
   {
-    period: "May 2024 - Now",
+    period: "May 2023 - Present",
     title: "Senior Mobile Developer",
     company: "Stanbest Group (EA) Limited",
-    description: "Integrating POS (Point of Sale) systems with eTIMS(Electronic Tax Invoice Management Systems) Creating RESTFUL APIs"
+    description: "Leading mobile application development using Kotlin and Flutter. Integrating POS (Point of Sale) systems with eTIMS (Electronic Tax Invoice Management Systems). Creating RESTful APIs and implementing secure payment gateways."
   },
   {
-    period: "January 2025 - Now",
+    period: "January 2024 - Present",
     title: "Frontend Developer and Software Development Instructor", 
     company: "Polycrest Africa",
-    description: "Polycrest is a leading institution in Africa dedicated to fostering innovation and excellence in game design, animation, and software development. It provides aspiring developers and animators with cutting-edge skills through immersive, hands-on learning experiences, ensuring they are industry-ready."
+    description: "Leading software development instruction and mentoring aspiring developers. Contributing to curriculum development and hands-on training in modern web technologies. Fostering innovation and excellence in game design, animation, and software development."
   },
   {
-    period: "January 2025 - Now",
-    title: "Frontend Developer r", 
-    company: "Gametribe",
-    description: "Indie Games Groups is a community program designed to bring together indie games developers and communities for networking, knowledge sharing and year-round access to education and best practice-sharing from Google. By joining an Indie Games Group, developers and artists will be able to grow their mobile game development knowledge in a supportive learning community and tap into resources within each community to build better quality mobile games and grow on Google Play."
+    period: "January 2024 - Present",
+    title: "Frontend Developer", 
+    company: "GameTribe",
+    description: "Developing and maintaining web applications using modern frontend technologies. Contributing to the gaming platform's user interface and experience. Collaborating with the team to implement new features and improve existing functionality."
   },
   {
-    period: "October 2023 - Now",
+    period: "October 2023 - Present",
     title: "Software Engineer Volunteer", 
-    company: "Inide Games Group Kenya",
-    description: "GameTribe is a leading e-sports and publishing company that transforms gaming into a platform for creativity, competition, and connection. As a publisher, we support developers from concept to global release, offering marketing expertise, distribution networks, and community-driven insights to maximize a game's reach and impact."
+    company: "Indie Games Group Kenya",
+    description: "Contributing to the gaming community through technical mentorship and development support. Participating in knowledge sharing sessions and helping developers improve their mobile game development skills."
   },
   {
-    period: "May 2024 - Novemeber 2024",
+    period: "May 2023 - November 2023",
     title: "Android Developer",
     company: "Suluhu Fintech",
-    description: "We provide MSMEs with an innovative and cutting-edge Lending-As-A-Service infrastructure to enable them to seamlessly offer targeted embedded finance options."
+    description: "Developed and maintained Android applications using Kotlin. Implemented secure financial features and integrated payment systems. Created innovative solutions for MSMEs to offer embedded finance options."
   },
   {
-    period: "May 2023 - Agust 2023",
+    period: "May 2023 - August 2023",
     title: "Project Assistant Intern", 
-    company: "Kenya Trade Network Agency(KenTrade)",
-    description: " Kenya TradeNet System is an online platform that serves as a single entry point for parties involved in international trade and transport logistics to lodge documents electronically, for processing, approvals and to make payments electronically for fees, levies, duties and taxes due to the Government, on goods imported or exported in the country."
+    company: "Kenya Trade Network Agency (KenTrade)",
+    description: "Contributed to the development and maintenance of the Kenya TradeNet System. Assisted in implementing electronic document processing and payment systems. Collaborated with the team to improve system efficiency and user experience."
   },
   {
-    period: "Jan 2022 - Novemeber 2024",
-    title: "Android Developer, UX/UI designer",
+    period: "January 2022 - Present",
+    title: "Android Developer & UI/UX Designer",
     company: "Upwork",
-    description: "I have the opportunity to work on diverse projects, collaborate with clients from around the world, and showcase your expertise in Android development. "
+    description: "Freelance developer working on diverse mobile application projects. Specializing in Android development using Kotlin and Flutter. Creating intuitive user interfaces and implementing modern design patterns."
   },
 ])
 
@@ -111,19 +111,19 @@ const education = ref([
     period: "November 2020 - October 2024",
     degree: "Bachelor of Science in Computer Science",
     institution: "Meru University of Science and Technology (MUST)",
-    description: "Comprehensive study of computer science fundamentals, including data structures, algorithms, software engineering principles, and database management systems."
+    description: "Comprehensive study of computer science fundamentals, including data structures, algorithms, software engineering principles, and database management systems. Specializing in mobile and web application development."
   },
   {
     period: "January 2020 - July 2020",
-    degree: "Mobile Software Development and IOT",
+    degree: "Mobile Software Development and IoT",
     institution: "Modcom Institute of Technology",
-    description: "We are a well established training institute offering Technology Trainings. Our goal is to provide access to high quality education that promotes student learning, to enable individuals develop skills to their fullest potential and support the economic development of Africa."
+    description: "Intensive training in mobile application development and Internet of Things technologies. Gained practical experience in building modern mobile applications and understanding IoT architectures."
   },
   {
-    period: "2024 -  Now",
-    degree: "Certifications",
+    period: "2024 - Present",
+    degree: "Professional Certifications",
     institution: "Udemy",
-    description: "We help organizations of all types and sizes prepare for the path ahead — wherever it leads. Our curated collection of business and technical courses help companies, governments, and nonprofits build skills to succeed in today’s rapidly changing digital landscape."
+    description: "Continuous professional development through various technical courses. Focus areas include Kotlin, Flutter, Next.js, and modern web development technologies. Staying updated with industry best practices and emerging technologies."
   },
 ])
 

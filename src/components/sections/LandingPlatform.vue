@@ -4,7 +4,7 @@
     <div class="absolute inset-0 z-0 parallax">
       <img
         src="/images/bg_main.jpg"
-        alt="Background"
+        alt="Portfolio background image"
         class="object-cover w-full h-full"
       />
     </div>
@@ -50,7 +50,7 @@
       <div class="hidden lg:block w-1/2">
         <img
           src="/images/ge.png"
-          alt="Edward Muss"
+          alt="Geoffrey Erastus - Portfolio"
           class="w-full h-auto object-contain"
         />
       </div>
