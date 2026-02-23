@@ -1,5 +1,5 @@
 <template>
-  <div class="relative min-h-screen overflow-hidden bg-gray-900">
+  <section class="relative min-h-screen overflow-hidden bg-gray-900" aria-label="Hero">
     <!-- Parallax background -->
     <div class="absolute inset-0 z-0 parallax">
       <img
@@ -25,7 +25,7 @@
           Welcome to my website
         </h1>
         <h2 class="text-4xl font-bold text-white sm:text-5xl md:text-6xl mb-2">
-          Hi, I'm <span class="text-orange-500">Geoffrey Erastus</span>
+          Hi, I'm <span class="text-primary-500">Geoffrey Erastus</span>
         </h2>
         <div class="text-2xl text-yellow-400 sm:text-3xl md:text-4xl h-12 mb-4">
           <span ref="typewriter"></span>
@@ -41,10 +41,10 @@
           work together to turn your ideas into reality! ✨
         </p>
         <button
-          class="px-6 py-3 bg-orange-500 text-white font-semibold rounded-md hover:bg-orange-600 transition duration-300"
+          class="px-6 py-3 bg-primary-500 text-white font-semibold rounded-lg hover:bg-primary-600 transition duration-300 focus:outline-none focus-visible:ring-2 focus-visible:ring-primary-500 focus-visible:ring-offset-2 focus-visible:ring-offset-gray-900"
           @click="scrollToSection('experience')"
         >
-          My Resume
+          View experience
         </button>
       </div>
       <div class="hidden lg:block w-1/2">
@@ -55,7 +55,7 @@
         />
       </div>
     </div>
-  </div>
+  </section>
 </template>
 
 <script>
@@ -87,10 +87,9 @@ export default {
       new Typewriter(typewriter.value, {
         strings: [
           "a Fullstack Software Engineer",
-          "Mobile Apps Developer",
+          "a Mobile Apps Developer",
           "a UI/UX Designer",
           "a Creative Graphics Designer",
-          "a UI/UX Designer",
         ],
         autoStart: true,
         loop: true,

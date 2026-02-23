@@ -1,4 +1,28 @@
-/* ./src/index.css */
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+  html {
+    @apply scroll-smooth;
+  }
+  body {
+    @apply bg-gray-900 text-gray-100 antialiased;
+  }
+  ::selection {
+    @apply bg-primary-500/30 text-white;
+  }
+  /* Focus visible for accessibility */
+  :focus-visible {
+    @apply outline-2 outline-offset-2 outline-primary-500;
+  }
+}
+
+@layer components {
+  .section-heading {
+    @apply text-3xl md:text-4xl font-bold text-white text-center relative pb-4;
+  }
+  .section-heading-accent {
+    @apply absolute bottom-0 left-1/2 -translate-x-1/2 w-16 h-1 bg-primary-500 rounded-full;
+  }
+}

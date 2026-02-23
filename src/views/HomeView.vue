@@ -1,28 +1,31 @@
 <template>
   <div id="home">
-    <LandingPlatform/>
+    <LandingPlatform />
   </div>
-  <div id="about">
-    <AboutMeSection/>
-  </div>
-  <div id="skills">
-    <whatIdo/>
-    <ExperienceStats/>
-  </div>
-    <latestWork id="latestWork"/>
-
-  <ExperienceSection id="experience"/>
-  <Testimonial/>
-  <div id="contact">
-    <ContactUs/>
-  </div>
-  <Footer/>
+  <section id="about" class="scroll-mt-24" aria-labelledby="about-heading">
+    <AboutMeSection />
+  </section>
+  <section id="experience" class="scroll-mt-24" aria-labelledby="experience-heading">
+    <ExperienceSection />
+  </section>
+  <section id="skills" class="scroll-mt-24" aria-labelledby="experience-stats-heading">
+    <ExperienceStats />
+  </section>
+  <section id="latestWork" class="scroll-mt-24" aria-labelledby="latest-work-heading">
+    <latestWork />
+  </section>
+  <section class="scroll-mt-24" aria-labelledby="testimonials-heading">
+    <Testimonial />
+  </section>
+  <section id="contact" class="scroll-mt-24" aria-labelledby="contact-heading">
+    <ContactUs />
+  </section>
+  <Footer />
 </template>
 
 <script>
 // Importing components
 import ExperienceSection from '../components/sections/ExperienceSection.vue';
-import whatIdo from '../components/sections/whatIdo.vue';
 import AboutMeSection from '../components/sections/AboutMeSection.vue';
 import latestWork from '../components/sections/latestWork.vue'
 import LandingPlatform from '../components/sections/LandingPlatform.vue';
@@ -34,7 +37,6 @@ import Testimonial from '@/components/sections/Testimonial.vue';
 export default {
   name: 'HomeView',
   components: {
-    whatIdo,
     AboutMeSection,
     ExperienceSection,
     latestWork,

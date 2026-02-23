@@ -1,23 +1,23 @@
 <template>
-    <div class="bg-gray-900 w-full">
-      <div class="text-white p-8 max-w-6xl mx-auto">
-        <h1 class="text-3xl font-bold mb-12 text-center relative pb-4">
-          What I Do
-          <div class="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-16 h-1 bg-orange-500"></div>
-        </h1>
-        
+  <section class="bg-gray-900 w-full" aria-labelledby="skills-heading">
+    <div class="text-white p-8 max-w-6xl mx-auto">
+      <h2 id="skills-heading" class="section-heading">
+        What I do
+        <span class="section-heading-accent"></span>
+      </h2>
+      
         <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
           <div v-for="(service, index) in services" :key="index" class="border-l border-gray-700 pl-6">
             <div class="flex items-center mb-4">
-              <component :is="service.icon" class="w-6 h-6 text-orange-500 mr-3" />
+              <component :is="service.icon" class="w-6 h-6 text-primary-500 mr-3" />
               <h3 class="text-xl font-semibold">{{ service.title }}</h3>
             </div>
             <p class="text-sm text-gray-400">{{ service.description }}</p>
           </div>
         </div>
-      </div>
     </div>
-  </template>
+  </section>
+</template>
   
   <script setup>
   import { ref } from 'vue'
@@ -36,8 +36,8 @@
     },
     {
       icon: CameraIcon,
-      title: "Pich Deck",
-      description: "I am an experienced pitch deck creator with over three years of expertise in designing compelling and persuasive presentations. I specialize in crafting visually engaging and impactful decks that effectively communicate ideas, attract investors, and drive business success."
+      title: "Pitch Deck",
+      description: "I am an experienced pitch deck creator with over six years of expertise in designing compelling and persuasive presentations. I specialize in crafting visually engaging and impactful decks that effectively communicate ideas, attract investors, and drive business success."
     }
   ])
   </script>

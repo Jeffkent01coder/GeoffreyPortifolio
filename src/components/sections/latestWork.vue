@@ -1,42 +1,74 @@
 <template>
-  <div>
-    <!-- Project Grid -->
-    <div class="bg-gray-900 w-full py-12">
-      <div class="max-w-7xl mx-auto px-4">
-        <div class="text-center mb-12">
-          <h2 class="text-4xl font-bold text-white inline-block">Latest Work</h2>
-          <div class="h-1 w-20 bg-orange-500 mx-auto mt-2"></div>
+  <div class="scroll-mt-24">
+    <!-- Section header -->
+    <div class="bg-gray-900 w-full py-16 px-4">
+      <div class="max-w-7xl mx-auto">
+        <div class="text-center mb-14" id="latest-work-heading">
+          <p class="text-primary-500 font-medium text-sm uppercase tracking-wider mb-2">Portfolio</p>
+          <h2 class="text-4xl md:text-5xl font-bold text-white mb-3">Latest Work</h2>
+          <p class="text-gray-400 max-w-2xl mx-auto text-lg">Selected projects across mobile, web, and design.</p>
         </div>
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          <div v-for="(project, index) in projects" :key="index" 
-               class="relative overflow-hidden rounded-lg cursor-pointer group"
-               @click="openProject(project)">
-            <img :src="project.images[0]" :alt="project.title" 
-                 class="w-full h-64 object-cover transition-transform duration-300 group-hover:scale-110">
-            <!-- Overlay: always visible on mobile, hover effect on larger screens -->
-            <div class="absolute inset-0 bg-black bg-opacity-60 flex flex-col justify-end p-4
-                        opacity-100 md:opacity-0 md:group-hover:opacity-100
-                        transition-opacity duration-300">
-              <h3 class="text-xl font-semibold text-white mb-2">{{ project.title }}</h3>
-              <p class="text-sm text-gray-300">{{ project.description }}</p>
+
+        <!-- Modern project grid -->
+        <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-8">
+          <article
+            v-for="(project, index) in projects"
+            :key="project.title"
+            class="group group/card bg-gray-800/80 rounded-2xl border border-gray-700/50 overflow-hidden cursor-pointer
+                     hover:border-primary-500/40 hover:shadow-xl hover:shadow-primary-500/5 hover:-translate-y-1
+                     transition-all duration-300 ease-out"
+            @click="openProject(project)"
+          >
+            <!-- Image -->
+            <div class="relative aspect-[4/3] overflow-hidden">
+              <img
+                :src="project.images[0]"
+                :alt="project.title"
+                class="w-full h-full object-cover transition-transform duration-500 group-hover/card:scale-105"
+              />
+              <div class="absolute inset-0 bg-gradient-to-t from-gray-900/90 via-gray-900/20 to-transparent opacity-0 group-hover/card:opacity-100 transition-opacity duration-300" />
+              <div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover/card:opacity-100 transition-opacity duration-300">
+                <span class="px-5 py-2.5 rounded-full bg-primary-500 text-white font-medium text-sm shadow-lg">
+                  View project
+                </span>
+              </div>
             </div>
-          </div>
+
+            <!-- Content -->
+            <div class="p-6">
+              <span class="inline-block text-xs font-medium text-primary-500/90 uppercase tracking-wider mb-2">
+                {{ project.type }}
+              </span>
+              <h3 class="text-xl font-semibold text-white mb-2 group-hover/card:text-primary-400 transition-colors">
+                {{ project.title }}
+              </h3>
+              <p class="text-gray-400 text-sm leading-relaxed line-clamp-2">
+                {{ project.description }}
+              </p>
+            </div>
+          </article>
         </div>
       </div>
     </div>
     
     <!-- Modal -->
     <teleport to="body">
-      <div v-if="showModal" 
-           class="fixed inset-0 bg-gray-900 bg-opacity-90 z-50 overflow-y-auto"
-           @click.self="closeModal"> <!-- Close modal when clicking outside -->
+      <div
+        v-if="showModal"
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="project-modal-title"
+        class="fixed inset-0 bg-gray-900/90 z-50 overflow-y-auto backdrop-blur-sm"
+        @click.self="closeModal"
+        @keydown.escape="closeModal"
+      >
         <div class="min-h-screen flex items-center justify-center p-4">
           <div class="bg-gray-800 w-full max-w-4xl lg:max-w-6xl xl:max-w-7xl rounded-lg overflow-hidden flex flex-col relative">
             <!-- Close button -->
             <button 
               @click="closeModal"
-              class="absolute top-4 right-4 bg-gray-700 rounded-full p-2 hover:bg-gray-600 transition-colors z-10"
-              aria-label="Close Modal"
+              class="absolute top-4 right-4 bg-gray-700 rounded-full p-2 hover:bg-gray-600 transition-colors z-10 focus:outline-none focus-visible:ring-2 focus-visible:ring-primary-500"
+              aria-label="Close project modal"
             >
               <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
@@ -88,7 +120,7 @@
 
               <!-- Right side - Content -->
               <div class="w-full lg:w-1/2 p-6 md:p-8 bg-gray-800 overflow-y-auto max-h-[calc(100vh-8rem)]">
-                <h2 class="text-orange-500 text-2xl md:text-3xl font-bold mb-4">{{ selectedProject.title }}</h2>
+                <h2 id="project-modal-title" class="text-primary-500 text-2xl md:text-3xl font-bold mb-4">{{ selectedProject.title }}</h2>
                 <p class="text-gray-300 mb-6 text-sm md:text-base">{{ selectedProject.fullDescription }}</p>
                 <div class="space-y-4 mb-6">
                   <div class="flex items-center">
@@ -129,8 +161,8 @@
                       </svg>
                     </span>
                     <span class="font-semibold w-20 text-gray-400">Preview:</span>
-                    <a :href="selectedProject.previewUrl" class="text-orange-500 hover:underline flex-grow">
-                      More Work
+                    <a href="https://github.com/Jeffkent01coder" target="_blank" rel="noopener noreferrer" class="text-primary-500 hover:underline flex-grow">
+                      View on GitHub
                     </a>
                   </div>
 
@@ -142,8 +174,8 @@
                       </svg>
                     </span>
                     <span class="font-semibold w-20 text-gray-400">Preview:</span>
-                    <a :href="selectedProject.polycrest" class="text-orange-500 hover:underline flex-grow">
-                      Polycrest Africa
+                    <a :href="selectedProject.polycrest" class="text-primary-500 hover:underline flex-grow">
+                      {{ selectedProject.previewLabel || 'Polycrest Africa' }}
                     </a>
                   </div>
                 </div>
@@ -161,9 +193,24 @@
 </template>
 
 <script setup>
-import { ref } from 'vue'
+import { ref, onMounted, onUnmounted } from 'vue'
 
 const projects = ref([
+  {
+    title: 'Kile Kitabu',
+    description: 'A Kotlin and Firebase-powered debt management app for secure debt tracking, reporting, and communication. Integrated M-Pesa, SasaPay, and KCB. Available on Google Play.',
+    images: ['/images/kile_kitabu.png'],
+    videoUrl: null,
+    fullDescription: 'Developed Kile Kitabu, a Kotlin and Firebase-powered debt management application designed for secure debt tracking, reporting, and communication. Integrated M-Pesa, SasaPay, and KCB payment services, enabling seamless and reliable digital transactions for users. Earned a formal partnership with KCB as part of the integration and product alignment process, strengthening the app’s credibility and financial ecosystem reach. Deployed the application to the Google Play Store, increasing accessibility and supporting user onboarding at scale. Planned and initiated version upgrades featuring a Flask backend and additional capabilities to enhance system reliability and overall user experience. Kile Kitabu is a simple tool that helps you keep track of all the money your customers owe you. Tech: Kotlin Coroutines, Kotlin, Firebase, M-Pesa, SasaPay, KCB, Flask.',
+    client: 'Personal project · KCB Partnership',
+    type: 'Mobile App · Debt Management',
+    year: 'Jan 2025 – Present',
+    previewUrl: 'https://play.google.com/store/apps/details?id=com.kilekitabu',
+    polycrest: 'https://play.google.com/store/apps/details?id=com.kilekitabu',
+    previewLabel: 'Google Play',
+    quote: 'Kile Kitabu is a simple tool in your phone. It does one job: it helps you keep track of all the money your customers owe you.',
+    quoteAuthor: 'Google Play'
+  },
   {
     title: 'Software Development',
     description: 'Your vision transformed into a seamless digital experience that engages and resonates with your audience. Every element reflects your brand’s unique identity, ensuring your message captivates and builds lasting connections with users.',
@@ -171,7 +218,7 @@ const projects = ref([
     videoUrl: null,
     fullDescription: 'This project features a sleek, minimalistic website built with Next.js and styled using Tailwind CSS, emphasizing clean aesthetics and user-friendly navigation. The site includes an integrated AI chatbot that enhances user interaction by providing real-time assistance and personalized responses. By leveraging Next.js for dynamic rendering and Tailwind CSS for a responsive layout, the website not only looks modern and inviting but also delivers a seamless and engaging user experience',
     client: 'Stanbest Group (EA) Limited, Polycrest Africa, Indie Games Group Kenya',
-    type: 'Sofwatware Development',
+    type: 'Software Development',
     year: '2024',
     previewUrl: 'https://github.com/Jeffkent01coder',
     polycrest:"https://polycrest.africa/",
@@ -188,6 +235,7 @@ const projects = ref([
     type: 'Graphic',
     year: '2024',
     previewUrl: 'https://www.behance.net/geoffreyerastus',
+    polycrest: 'https://www.behance.net/geoffreyerastus',
     quote: 'Great design is more than just aesthetics; it’s a visual story that speaks louder than words and lingers longer than a glance',
     quoteAuthor: 'AI'
   },
@@ -201,6 +249,7 @@ const projects = ref([
     type: 'User Interface/User Experience Design',
     year: '2024. 2023',
     previewUrl: 'https://www.figma.com/design/CALoyJqgn3oYv2ryML7BFv/Stanbest?node-id=0-1&t=TtBFpTfzeHyUwW0T-1',
+    polycrest: 'https://www.figma.com/design/CALoyJqgn3oYv2ryML7BFv/Stanbest?node-id=0-1&t=TtBFpTfzeHyUwW0T-1',
     quote: "We tend to forget that behind every product, there's a person – a human with dreams, struggles, and emotions. UX design is about connecting the heart of the designer to the heart of the user",
     quoteAuthor: 'Aarron Walter'
   },
@@ -231,4 +280,16 @@ const prevImage = () => {
     currentImageIndex.value = (currentImageIndex.value - 1 + selectedProject.value.images.length) % selectedProject.value.images.length
   }
 }
+
+function onEscape(e) {
+  if (e.key === 'Escape') closeModal()
+}
+
+onMounted(() => {
+  document.addEventListener('keydown', onEscape)
+})
+
+onUnmounted(() => {
+  document.removeEventListener('keydown', onEscape)
+})
 </script>

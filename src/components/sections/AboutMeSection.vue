@@ -1,23 +1,22 @@
 <template>
-  <div class="bg-gray-900 w-full">
+  <section class="bg-gray-900 w-full" aria-labelledby="about-heading">
     <div class="text-white p-8 max-w-7xl mx-auto">
       <div class="grid grid-cols-1 lg:grid-cols-5 gap-8">
         <div class="col-span-1 lg:col-span-2">
           <img
             src="/images/ge.png"
             alt="Geoffrey Erastus - Fullstack Software Engineer"
-            class="w-full rounded-lg shadow-lg mb-6 transition-all duration-300 ease-in-out"
+            class="w-full rounded-xl shadow-lg mb-6 transition-all duration-300 ease-in-out"
             :class="{ 'lg:h-[700px] lg:object-cover': showAllSkills }"
           />
         </div>
         <div class="col-span-1 lg:col-span-3 text-left">
-          <h1 class="text-4xl font-bold mb-4">About Geoffrey Erastus</h1>
-          <h2 class="text-2xl font-semibold mb-4">
-            Fullstack Software Engineer | Full Stack Developer | Creative
-            Designer
-          </h2>
+          <h2 id="about-heading" class="section-heading text-left">About me</h2>
+          <p class="text-xl font-semibold text-gray-300 mb-4">
+            Fullstack Software Engineer · Full Stack Developer · Creative Designer
+          </p>
           <p class="text-sm text-gray-400 mb-4">
-            A dynamic professional with three years of experience spanning IT,
+            A dynamic professional with 6+ years of experience spanning IT,
             media, and the entertainment industry. Skilled in delivering
             top-tier solutions in mobile and web development, video editing, and
             graphic design. Proficient in a diverse set of technologies and
@@ -48,7 +47,7 @@
               </div>
               <div class="w-full bg-gray-700 rounded-full h-2">
                 <div
-                  class="bg-orange-500 h-2 rounded-full relative overflow-hidden"
+                  class="bg-primary-500 h-2 rounded-full relative overflow-hidden"
                   :style="{ width: `${skill.percentage}%` }"
                 ></div>
               </div>
@@ -57,14 +56,14 @@
 
           <button
             @click="toggleSkills"
-            class="mt-6 px-4 py-2 bg-orange-500 text-white rounded hover:bg-orange-600 transition duration-300"
+            class="mt-6 px-4 py-2 bg-primary-500 text-white rounded-lg hover:bg-primary-600 transition duration-300 focus:outline-none focus-visible:ring-2 focus-visible:ring-primary-500 focus-visible:ring-offset-2 focus-visible:ring-offset-gray-900"
           >
-            {{ showAllSkills ? "Show Less" : "Load More" }}
+            {{ showAllSkills ? "Show less" : "Load more skills" }}
           </button>
         </div>
       </div>
     </div>
-  </div>
+  </section>
 </template>
 
 <script setup>
