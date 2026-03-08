@@ -3,41 +3,108 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Canonical URL (update BASE_URL_SEO when deploying to production) -->
+    <link rel="canonical" href="https://geoffrey-portifolio.vercel.app/">
 
     <!-- Favicon -->
     <link rel="icon" href="<%= BASE_URL %>favicon.ico">
-    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-    <link rel="manifest" href="/site.webmanifest">
+    <link rel="apple-touch-icon" sizes="180x180" href="<%= BASE_URL %>apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="<%= BASE_URL %>favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="<%= BASE_URL %>favicon-16x16.png">
+    <link rel="manifest" href="<%= BASE_URL %>site.webmanifest">
 
     <!-- Primary Meta Tags -->
-    <title>Geoffrey Erastus — Full‑Stack Software Engineer & Designer</title>
-    <meta name="title" content="Geoffrey Erastus — Full‑Stack Software Engineer & Designer">
-    <meta name="description" content="Portfolio of Geoffrey Erastus: full-stack development, mobile apps (Kotlin, Flutter), UI/UX design, and graphic design. 6+ years building products that scale.">
-    <meta name="keywords" content="Geoffrey Erastus, portfolio, full-stack developer, software engineer, mobile developer, Kotlin, Flutter, UI/UX design, web development">
+    <title>Geoffrey Erastus — Full-Stack Software Engineer & Designer | Portfolio</title>
+    <meta name="title" content="Geoffrey Erastus — Full-Stack Software Engineer & Designer | Portfolio">
+    <meta name="description" content="Portfolio of Geoffrey Erastus: 6+ years in full-stack development, mobile apps (Kotlin, Flutter), UI/UX and graphic design. Hire a software engineer for web, Android, and iOS. Based in Kenya.">
+    <meta name="keywords" content="Geoffrey Erastus, portfolio, full-stack developer, software engineer, mobile developer, Kotlin, Flutter, Android, iOS, UI/UX design, web development, Vue, React, Firebase, Kenya, Nairobi, hire developer">
     <meta name="author" content="Geoffrey Erastus">
-    <meta name="robots" content="index, follow">
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+    <meta name="googlebot" content="index, follow">
+    <meta name="language" content="English">
+    <meta name="revisit-after" content="7 days">
+    <meta name="rating" content="general">
 
-    <!-- Open Graph -->
+    <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
-    <meta property="og:title" content="Geoffrey Erastus — Full‑Stack Software Engineer">
-    <meta property="og:description" content="Portfolio: web & mobile development, UI/UX and graphic design. Let's build something great.">
-    <meta property="og:image" content="<%= BASE_URL %>images/jeffrey.jpeg">
-    <meta property="og:image:alt" content="Geoffrey Erastus">
+    <meta property="og:url" content="https://geoffrey-portifolio.vercel.app/">
+    <meta property="og:title" content="Geoffrey Erastus — Full-Stack Software Engineer & Designer">
+    <meta property="og:description" content="Portfolio: 6+ years in full-stack, mobile (Kotlin, Flutter), and UI/UX design. Web, Android, iOS. Let's build something great.">
+    <meta property="og:image" content="https://geoffrey-portifolio.vercel.app/images/jeffrey.jpeg">
+    <meta property="og:image:secure_url" content="https://geoffrey-portifolio.vercel.app/images/jeffrey.jpeg">
+    <meta property="og:image:alt" content="Geoffrey Erastus — Software Engineer & Designer">
+    <meta property="og:image:type" content="image/jpeg">
     <meta property="og:site_name" content="Geoffrey Erastus Portfolio">
+    <meta property="og:locale" content="en_US">
 
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Geoffrey Erastus — Software Engineer & Designer">
-    <meta name="twitter:description" content="Portfolio: full-stack, mobile, and design. 6+ years of experience.">
-    <meta name="twitter:image" content="<%= BASE_URL %>images/jeffrey.jpeg">
+    <meta name="twitter:url" content="https://geoffrey-portifolio.vercel.app/">
+    <meta name="twitter:title" content="Geoffrey Erastus — Full-Stack Software Engineer & Designer">
+    <meta name="twitter:description" content="Portfolio: 6+ years full-stack, mobile (Kotlin, Flutter), UI/UX. Web, Android, iOS. Open for projects.">
+    <meta name="twitter:image" content="https://geoffrey-portifolio.vercel.app/images/jeffrey.jpeg">
     <meta name="twitter:image:alt" content="Geoffrey Erastus Portfolio">
+    <meta name="twitter:label1" content="Role">
+    <meta name="twitter:data1" content="Full-Stack Software Engineer & Designer">
 
-    <!-- Theme (dark) -->
+    <!-- Theme -->
     <meta name="theme-color" content="#111827">
+    <meta name="msapplication-TileColor" content="#111827">
     <meta name="color-scheme" content="dark">
+
+    <!-- Structured Data (JSON-LD) for rich results and knowledge panel -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "Person",
+          "@id": "https://geoffrey-portifolio.vercel.app/#person",
+          "name": "Geoffrey Erastus",
+          "url": "https://geoffrey-portifolio.vercel.app/",
+          "image": "https://geoffrey-portifolio.vercel.app/images/jeffrey.jpeg",
+          "jobTitle": "Full-Stack Software Engineer",
+          "description": "Full-stack developer and designer with 6+ years experience in web and mobile development (Kotlin, Flutter), UI/UX and graphic design.",
+          "knowsAbout": ["Software Development", "Mobile Development", "Kotlin", "Flutter", "Vue.js", "UI/UX Design", "Graphic Design", "Firebase", "Android", "iOS"],
+          "sameAs": [
+            "https://github.com/Jeffkent01coder",
+            "https://www.linkedin.com/in/geoffrey-erastus-3a185a214/",
+            "https://x.com/CodexKent"
+          ],
+          "worksFor": {
+            "@type": "Organization",
+            "name": "Verido"
+          },
+          "alumniOf": {
+            "@type": "CollegeOrUniversity",
+            "name": "Meru University of Science and Technology"
+          }
+        },
+        {
+          "@type": "WebSite",
+          "@id": "https://geoffrey-portifolio.vercel.app/#website",
+          "url": "https://geoffrey-portifolio.vercel.app/",
+          "name": "Geoffrey Erastus Portfolio",
+          "description": "Professional portfolio of Geoffrey Erastus — Full-Stack Software Engineer & Designer. Web, mobile, and design projects.",
+          "publisher": { "@id": "https://geoffrey-portifolio.vercel.app/#person" },
+          "inLanguage": "en-US",
+          "potentialAction": {
+            "@type": "ReadAction",
+            "target": "https://geoffrey-portifolio.vercel.app/"
+          }
+        },
+        {
+          "@type": "ProfilePage",
+          "@id": "https://geoffrey-portifolio.vercel.app/#profilepage",
+          "url": "https://geoffrey-portifolio.vercel.app/",
+          "mainEntity": { "@id": "https://geoffrey-portifolio.vercel.app/#person" },
+          "description": "Portfolio and profile of Geoffrey Erastus — Full-Stack Software Engineer, mobile developer (Kotlin, Flutter), and UI/UX designer."
+        }
+      ]
+    }
+    </script>
 
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
