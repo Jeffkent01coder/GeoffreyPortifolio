@@ -261,6 +261,21 @@ import { ref, computed, onMounted, onUnmounted, nextTick } from 'vue'
 
 const projects = ref([
   {
+    title: 'MwananchiGo',
+    description: 'Flutter mobile lending app for Mwananchi Credit Limited—loan applications, secure transactions, and account management. Published on Google Play.',
+    images: ['/images/mwananchigo.png'],
+    videoUrl: null,
+    fullDescription: 'Developed MwananchiGo from Figma designs into a fully functional cross-platform mobile application using Flutter for Mwananchi Credit Limited. Integrated RESTful APIs for loan applications, user authentication, account management, and real-time financial transactions. Implemented secure certificate pinning and mobile security best practices, built responsive UI for Android and iOS, and managed deployment to Google Play Store and Apple App Store. Loans are offered with a repayment period of 3 months, supporting secure digital lending operations. Tech: Flutter, REST APIs, cross-platform development, certificate pinning, system deployment.',
+    client: 'Mwananchi Credit Limited',
+    type: 'Mobile App · Flutter',
+    year: 'Jun 2025 – Present',
+    previewUrl: 'https://play.google.com/store/apps/details?id=com.mwananchigo.app&hl=en_US',
+    polycrest: 'https://play.google.com/store/apps/details?id=com.mwananchigo.app&hl=en_US',
+    previewLabel: 'Google Play',
+    quote: 'Loans are offered with a repayment period of 3 months. Maximum APR is 96% per annum, with a one-time processing fee of 2%.',
+    quoteAuthor: 'Google Play'
+  },
+  {
     title: 'Verido',
     description: 'Data-driven risk assessment platform for distribution networks. Know who to trust, track payments, and manage your business from your phone. Built for agribusiness, FMCG, and emerging markets.',
     images: ['/images/verido.png'],

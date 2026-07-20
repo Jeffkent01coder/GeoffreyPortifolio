@@ -24,9 +24,8 @@
             {{ item.name }}
           </a>
           <a
-            href="https://docs.google.com/document/d/1cHMcBAqgVTutQhBWoZpC6mLeczx5lUWfk_bXAXTvJKs/edit?tab=t.0"
-            target="_blank"
-            rel="noopener noreferrer"
+            href="/docs/GEOFFREY%20ERASTUS%20WAMBAYA%20Resume.docx.pdf"
+            download="GEOFFREY ERASTUS WAMBAYA Resume.pdf"
             class="ml-2 px-4 py-2 bg-primary-500 text-white text-sm font-semibold rounded-lg hover:bg-primary-600 transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-primary-500 focus-visible:ring-offset-2 focus-visible:ring-offset-gray-900"
           >
             Resume
@@ -36,9 +35,8 @@
         <!-- Mobile menu button -->
         <div class="md:hidden flex items-center gap-2">
           <a
-            href="https://docs.google.com/document/d/1cHMcBAqgVTutQhBWoZpC6mLeczx5lUWfk_bXAXTvJKs/edit?tab=t.0"
-            target="_blank"
-            rel="noopener noreferrer"
+            href="/docs/GEOFFREY%20ERASTUS%20WAMBAYA%20Resume.docx.pdf"
+            download="GEOFFREY ERASTUS WAMBAYA Resume.pdf"
             class="px-3 py-2 text-sm font-medium text-primary-400 hover:text-primary-300"
           >
             Resume

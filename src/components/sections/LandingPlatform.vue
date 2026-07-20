@@ -22,7 +22,7 @@
         <h1
           class="text-sm font-medium mb-2 sm:text-base md:text-lg text-gray-300"
         >
-          Welcome to my website
+          Welcome
         </h1>
         <h2 class="text-4xl font-bold text-white sm:text-5xl md:text-6xl mb-2">
           Hi, I'm <span class="text-primary-500">Geoffrey Erastus</span>
@@ -30,15 +30,14 @@
         <div class="text-2xl text-yellow-400 sm:text-3xl md:text-4xl h-12 mb-4">
           <span ref="typewriter"></span>
         </div>
-        <p class="text-base text-gray-300 max-w-2xl mb-8">
-          I am a versatile Software Engineer, Full-Stack Developer, Mobile App
-          Developer, Graphic Designer, and UI/UX Designer. Driven by a passion
-          for creating meaningful digital experiences, I blend technical
-          proficiency with creativity to deliver impactful solutions across
-          multiple platforms. Whether it's developing scalable web applications,
-          designing user-friendly mobile apps, or crafting visually compelling
-          graphics, I approach every project with a holistic perspective. Let's
-          work together to turn your ideas into reality! ✨
+        <p class="text-base text-gray-300 max-w-2xl mb-8 leading-relaxed">
+          Software Engineer with 5+ years of experience in mobile and web application
+          development, specializing in Flutter, Kotlin, and API integrations. I have a
+          proven track record building Android POS terminal systems, fintech solutions,
+          and scalable apps that improve compliance, accessibility, and user experience.
+          I am driven to create intuitive, high-impact products that boost efficiency and
+          growth across diverse industries—focused on scalable, user-centered solutions
+          and AI.
         </p>
         <button
           class="px-6 py-3 bg-primary-500 text-white font-semibold rounded-lg hover:bg-primary-600 transition duration-300 focus:outline-none focus-visible:ring-2 focus-visible:ring-primary-500 focus-visible:ring-offset-2 focus-visible:ring-offset-gray-900"
@@ -89,7 +88,9 @@ export default {
           "a Fullstack Software Engineer",
           "a Mobile Apps Developer",
           "a UI/UX Designer",
-          "a Creative Graphics Designer",
+          "a Prompt Engineer",
+          "a Web Developer",
+          "an AI Automation Enthusiast",
         ],
         autoStart: true,
         loop: true,

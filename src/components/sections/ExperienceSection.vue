@@ -8,9 +8,8 @@
           <span class="section-heading-accent"></span>
         </h2>
         <a
-          href="https://docs.google.com/document/d/1cHMcBAqgVTutQhBWoZpC6mLeczx5lUWfk_bXAXTvJKs/edit?tab=t.0"
-          target="_blank"
-          rel="noopener noreferrer"
+          href="/docs/GEOFFREY%20ERASTUS%20WAMBAYA%20Resume.docx.pdf"
+          download="GEOFFREY ERASTUS WAMBAYA Resume.pdf"
           class="inline-flex items-center justify-center gap-2 bg-primary-500 hover:bg-primary-600 text-white font-semibold py-3 px-5 rounded-xl transition-all duration-200 hover:shadow-lg hover:shadow-primary-500/20 focus:outline-none focus-visible:ring-2 focus-visible:ring-primary-500 focus-visible:ring-offset-2 focus-visible:ring-offset-gray-900 shrink-0"
         >
           <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
@@ -43,7 +42,7 @@
                   <p class="text-gray-400 font-medium">{{ job.company }}</p>
                 </div>
                 <span class="text-xs font-medium text-primary-400/90 whitespace-nowrap rounded-full bg-primary-500/15 px-3 py-1">
-                  {{ job.period }}{{ job.periodDetail ? ` · ${job.periodDetail}` : '' }}
+                  {{ formatJobPeriod(job) }}{{ formatJobDuration(job) ? ` · ${formatJobDuration(job)}` : '' }}
                 </span>
               </div>
 
@@ -56,6 +55,16 @@
                 </span>
                 <span v-if="job.location" class="inline-flex items-center rounded-lg bg-gray-700/80 px-2.5 py-1 text-xs font-medium text-gray-400 truncate max-w-[180px]" :title="job.location">
                   {{ job.location }}
+                </span>
+              </div>
+
+              <div v-if="job.skills && job.skills.length" class="flex flex-wrap gap-1.5 mb-3">
+                <span
+                  v-for="skill in job.skills"
+                  :key="skill"
+                  class="inline-flex items-center rounded-full bg-primary-500/10 border border-primary-500/25 px-2.5 py-0.5 text-xs font-medium text-primary-300"
+                >
+                  {{ skill }}
                 </span>
               </div>
 
@@ -172,10 +181,44 @@
 <script setup>
 import { ref, computed } from 'vue'
 
+const MONTH_LABELS = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec']
+
+function jobStartDate(job) {
+  return new Date(job.startYear, job.startMonth - 1, 1)
+}
+
+function jobEndDate(job) {
+  if (job.isActive) return new Date()
+  return new Date(job.endYear, job.endMonth - 1, 1)
+}
+
+function formatMonthYear(date) {
+  return `${MONTH_LABELS[date.getMonth()]} ${date.getFullYear()}`
+}
+
+function formatJobPeriod(job) {
+  const start = formatMonthYear(jobStartDate(job))
+  const end = formatMonthYear(jobEndDate(job))
+  return `${start} - ${end}`
+}
+
+function formatJobDuration(job) {
+  const start = jobStartDate(job)
+  const end = jobEndDate(job)
+  let months = (end.getFullYear() - start.getFullYear()) * 12 + (end.getMonth() - start.getMonth()) + 1
+  if (months < 1) months = 1
+  const years = Math.floor(months / 12)
+  const rem = months % 12
+  if (years && rem) return `${years} yr${years > 1 ? 's' : ''} ${rem} mos`
+  if (years) return `${years} yr${years > 1 ? 's' : ''}`
+  return `${rem} mos`
+}
+
 const experiences = ref([
   {
-    period: "Nov 2025 - Present",
-    periodDetail: "4 mos",
+    startYear: 2025,
+    startMonth: 11,
+    isActive: true,
     title: "Flutter Engineer",
     company: "Verido",
     employmentType: "Full-time",
@@ -193,19 +236,33 @@ const experiences = ref([
     ]
   },
   {
-    period: "Jul 2025 - Present",
-    periodDetail: "8 mos",
-    title: "Software Engineer",
-    company: "ProDG Studio",
-    employmentType: "Part-time",
+    startYear: 2025,
+    startMonth: 6,
+    isActive: true,
+    title: "Lead Mobile Engineer",
+    company: "Mwananchi Credit Limited",
+    employmentType: "Contract",
     workMode: "Remote",
-    location: "London Area, United Kingdom",
-    summary: "We combine advanced software development, strategic insights, and comprehensive business support to drive digital transformation and venture success for leading organizations around the world.",
-    achievements: []
+    location: "Nairobi County, Kenya",
+    skills: ["Flutter", "REST APIs", "System Deployment", "Cross-platform Development", "Integrations", "Front-End Development"],
+    summary: "Leading development of MwananchiGo—a cross-platform Flutter lending app—from Figma designs through Play Store and App Store release, with secure API integrations and compliance-focused financial workflows.",
+    achievements: [
+      "Developed MwananchiGo from Figma designs into a fully functional cross-platform mobile application using Flutter.",
+      "Integrated RESTful APIs for loan applications, user authentication, account management, and real-time financial transactions.",
+      "Implemented secure certificate pinning and mobile security best practices to protect API communication and sensitive user data.",
+      "Built responsive and scalable UI components optimized for both Android and iOS platforms.",
+      "Conducted end-to-end testing, debugging, performance optimization, and quality assurance across multiple devices and OS versions.",
+      "Managed app deployment, release configuration, and publishing processes for both Google Play Store and Apple App Store.",
+      "Collaborated with backend and product teams to ensure seamless integration of financial services and compliance requirements.",
+      "Optimized application performance, stability, and user experience to support secure digital lending operations."
+    ]
   },
   {
-    period: "May 2024 - Present",
-    periodDetail: "1 yr 10 mos",
+    startYear: 2024,
+    startMonth: 5,
+    endYear: 2026,
+    endMonth: 5,
+    isActive: false,
     title: "Lead Mobile Engineer",
     company: "Stanbest Group EA Limited",
     employmentType: "Full-time",
@@ -226,7 +283,25 @@ const experiences = ref([
     ]
   },
   {
-    period: "January 2024 - Present",
+    startYear: 2025,
+    startMonth: 7,
+    endYear: 2026,
+    endMonth: 5,
+    isActive: false,
+    title: "Software Engineer",
+    company: "ProDG Studio",
+    employmentType: "Part-time",
+    workMode: "Remote",
+    location: "London Area, United Kingdom",
+    summary: "We combine advanced software development, strategic insights, and comprehensive business support to drive digital transformation and venture success for leading organizations around the world.",
+    achievements: []
+  },
+  {
+    startYear: 2025,
+    startMonth: 1,
+    endYear: 2025,
+    endMonth: 8,
+    isActive: false,
     title: "Frontend Developer and Software Development Instructor",
     company: "Polycrest Africa",
     employmentType: "Full-time",
@@ -236,7 +311,11 @@ const experiences = ref([
     achievements: []
   },
   {
-    period: "January 2024 - Present",
+    startYear: 2025,
+    startMonth: 1,
+    endYear: 2026,
+    endMonth: 1,
+    isActive: false,
     title: "Frontend Developer",
     company: "GameTribe",
     employmentType: "Full-time",
@@ -246,7 +325,11 @@ const experiences = ref([
     achievements: []
   },
   {
-    period: "October 2023 - Present",
+    startYear: 2023,
+    startMonth: 10,
+    endYear: 2025,
+    endMonth: 8,
+    isActive: false,
     title: "Software Engineer Volunteer",
     company: "Indie Games Group Kenya",
     employmentType: "Part-time",
@@ -256,7 +339,11 @@ const experiences = ref([
     achievements: []
   },
   {
-    period: "May 2023 - November 2023",
+    startYear: 2023,
+    startMonth: 5,
+    endYear: 2023,
+    endMonth: 11,
+    isActive: false,
     title: "Android Developer",
     company: "Suluhu Fintech",
     employmentType: "Full-time",
@@ -266,7 +353,11 @@ const experiences = ref([
     achievements: []
   },
   {
-    period: "May 2023 - August 2023",
+    startYear: 2023,
+    startMonth: 5,
+    endYear: 2023,
+    endMonth: 8,
+    isActive: false,
     title: "Project Assistant Intern",
     company: "Kenya Trade Network Agency (KenTrade)",
     employmentType: "Full-time",
