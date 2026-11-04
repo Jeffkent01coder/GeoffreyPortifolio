@@ -5,8 +5,8 @@
       <div class="max-w-7xl mx-auto">
         <div class="text-center mb-14" id="latest-work-heading">
           <p class="text-primary-500 font-medium text-sm uppercase tracking-wider mb-2">Portfolio</p>
-          <h2 class="text-4xl md:text-5xl font-bold text-white mb-3">Latest Work</h2>
-          <p class="text-gray-400 max-w-2xl mx-auto text-lg">Selected projects across mobile, web, and design.</p>
+          <h2 class="font-display text-4xl md:text-5xl font-bold text-white mb-3">Latest Work</h2>
+          <p class="text-gray-400 max-w-2xl mx-auto text-lg">Selected mobile and fintech products shipped to production—including Jilipe Sasa, MwananchiGo, Verido, Afre360, OutOut, and Kile Kitabu.</p>
         </div>
 
         <!-- Modern project grid (first 6) -->
@@ -20,11 +20,15 @@
             @click="openProject(project)"
           >
             <!-- Image -->
-            <div class="relative aspect-[4/3] overflow-hidden">
+            <div
+              class="relative aspect-[4/3] overflow-hidden"
+              :class="project.logoCover === 'contain' ? 'bg-white p-6 sm:p-8 flex items-center justify-center' : ''"
+            >
               <img
                 :src="project.images[0]"
                 :alt="project.title"
-                class="w-full h-full object-cover transition-transform duration-500 group-hover/card:scale-105"
+                class="w-full h-full transition-transform duration-500 group-hover/card:scale-105"
+                :class="project.logoCover === 'contain' ? 'object-contain' : 'object-cover'"
               />
               <div class="absolute inset-0 bg-gradient-to-t from-gray-900/90 via-gray-900/20 to-transparent opacity-0 group-hover/card:opacity-100 transition-opacity duration-300" />
               <div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover/card:opacity-100 transition-opacity duration-300">
@@ -261,6 +265,22 @@ import { ref, computed, onMounted, onUnmounted, nextTick } from 'vue'
 
 const projects = ref([
   {
+    title: 'Jilipe Sasa',
+    description: 'Mobile app for Kenya’s earned-wage access platform—instant access to salary already earned, financial wellness tools, and M-Pesa payouts. Available on Google Play.',
+    images: ['/images/jilipesasa.png'],
+    logoCover: 'contain',
+    videoUrl: null,
+    fullDescription: 'Built the Jilipe Sasa mobile app for Sipranda Capital’s financial wellness platform—giving employees instant access to a portion of wages already earned before payday. The product supports real-time wage advances, transaction history, savings culture tools, and financial literacy resources, with M-Pesa as the payout rail. Designed for employees facing liquidity gaps between pay cycles and for employers who want cost-free payroll-linked integration that improves productivity and wellbeing. Complements the web experience at jilipesasa.com and USSD *221#. Tech: mobile app development, fintech APIs, M-Pesa integration, secure auth.',
+    client: 'Jilipe Sasa / Sipranda Capital Ltd',
+    type: 'Mobile App · Fintech · Earned Wage Access',
+    year: '2025',
+    previewUrl: 'https://play.google.com/store/apps/details?id=com.jilipesasa.app',
+    polycrest: 'https://play.google.com/store/apps/details?id=com.jilipesasa.app',
+    previewLabel: 'Google Play',
+    quote: 'Instant access to your earned salary—financial wellness built around payday anyday.',
+    quoteAuthor: 'Jilipe Sasa'
+  },
+  {
     title: 'MwananchiGo',
     description: 'Flutter mobile lending app for Mwananchi Credit Limited—loan applications, secure transactions, and account management. Published on Google Play.',
     images: ['/images/mwananchigo.png'],
@@ -289,6 +309,21 @@ const projects = ref([
     previewLabel: 'Google Play',
     quote: 'Know who to trust. Grow your business. Use data to decide who gets credit, track every payment, and manage your business from your phone.',
     quoteAuthor: 'Verido'
+  },
+  {
+    title: 'iSale',
+    description: 'Stanbest Group’s eTIMS Point of Sale app—POS, OSCU/VSCU, and KRA-compliant sales. Migrated from native Kotlin to Flutter for cross-platform support. Available on Google Play.',
+    images: ['/images/isale.png'],
+    videoUrl: null,
+    fullDescription: 'iSale is Stanbest Group’s eTIMS (electronic Tax Invoice Management System) Point of Sale app for sales compliance in Kenya. Originally built in native Kotlin, the product was migrated to Flutter for cross-platform support while keeping Online and Virtual Sales Control Units (OSCU/VSCU), ERP integrations, VAT reporting, and Kenya Revenue Authority (KRA) / eTIMS compliance. The app supports transparent sales processes, accurate reporting, and reliable integration with Stanbest’s web and backend services. Tech: Flutter (migrated from native Kotlin), eTIMS, KRA compliance, POS.',
+    client: 'Stanbest Group (EA) Limited',
+    type: 'Mobile App · Flutter · eTIMS',
+    year: '2024 – Present',
+    previewUrl: 'https://play.google.com/store/apps/details?id=com.stanbestlimited.isale',
+    polycrest: 'https://play.google.com/store/apps/details?id=com.stanbestlimited.isale',
+    previewLabel: 'Google Play',
+    quote: 'Stanbest Group’s iSALE integration solutions focus on optimizing e-commerce operations and ensuring businesses comply with tax regulations.',
+    quoteAuthor: 'Google Play'
   },
   {
     title: 'OutOut',
@@ -364,21 +399,6 @@ const projects = ref([
     previewLabel: 'Stanbest Group Website',
     quote: 'Any fool can write code that a computer can understand. Good programmers write code that humans can understand.',
     quoteAuthor: 'Martin Fowler'
-  },
-  {
-    title: 'iSale',
-    description: 'Kotlin Android app for Stanbest Group’s eTIMS integration—POS, OSCU/VSCU, and KRA-compliant sales. Helps businesses manage online and virtual sales and stay compliant.',
-    images: ['/images/isale.png'],
-    videoUrl: null,
-    fullDescription: 'iSale is Stanbest Group’s Android app for eTIMS (electronic Tax Invoice Management System) and sales compliance in Kenya. Built with Kotlin, it provides Online and Virtual Sales Control Units (OSCU/VSCU) that integrate with existing ERP systems so businesses can manage transactions, streamline VAT reporting, and meet Kenya Revenue Authority (KRA) and eTIMS requirements. The app supports transparent sales processes, accurate reporting, and reliable integration with Stanbest’s web and backend services. Tech: Kotlin, Android, eTIMS, KRA compliance, POS.',
-    client: 'Stanbest Group (EA) Limited',
-    type: 'Mobile App · Kotlin · eTIMS',
-    year: '2024 – Present',
-    previewUrl: 'https://play.google.com/store/apps/details?id=com.stanbestlimited.isale&hl=en',
-    polycrest: 'https://play.google.com/store/apps/details?id=com.stanbestlimited.isale&hl=en',
-    previewLabel: 'Google Play',
-    quote: 'Stanbest Group’s iSALE integration solutions focus on optimizing e-commerce operations and ensuring businesses comply with tax regulations.',
-    quoteAuthor: 'Google Play'
   },
   {
     title: 'GameTribe',

@@ -1,5 +1,5 @@
 <template>
-  <section class="bg-gray-900 w-full py-16 sm:py-20" aria-labelledby="experience-heading">
+  <section class="bg-gray-950 w-full py-16 sm:py-20" aria-labelledby="experience-heading">
     <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
       <!-- Header + CTA -->
       <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-6 mb-12">
@@ -217,26 +217,6 @@ function formatJobDuration(job) {
 const experiences = ref([
   {
     startYear: 2025,
-    startMonth: 11,
-    isActive: true,
-    title: "Flutter Engineer",
-    company: "Verido",
-    employmentType: "Full-time",
-    workMode: "Remote",
-    location: "London Area, United Kingdom",
-    summary: "Building and improving the Verido mobile app with AI-powered voice and data insights, platform stability, and modern UI to help micro businesses grow revenue and operations.",
-    achievements: [
-      "Integrated an AI-powered real-time voice agent using OpenAI Realtime APIs, enabling multilingual voice-based data capture and conversational responses (40% improvement in sales process efficiency).",
-      "Implemented an AI-driven data analysis and insights engine for transactional and operational data (15% improvement in operational decision-making).",
-      "Resolved critical application access and stability issues, fully restoring platform availability (100% increase in active app usage).",
-      "Redesigned and modernized the UI, leading to 10% increase in user retention.",
-      "Led end-to-end integration of backend services and third-party APIs.",
-      "Introduced an intelligent auto-upgrade and notification system (25% reduction in version fragmentation, 10% decrease in user-reported issues).",
-      "Integrated Zipy performance monitoring and crash analytics (30% reduction in crash rates, 20% improvement in MTTR)."
-    ]
-  },
-  {
-    startYear: 2025,
     startMonth: 6,
     isActive: true,
     title: "Lead Mobile Engineer",
@@ -244,7 +224,7 @@ const experiences = ref([
     employmentType: "Contract",
     workMode: "Remote",
     location: "Nairobi County, Kenya",
-    skills: ["Flutter", "REST APIs", "System Deployment", "Cross-platform Development", "Integrations", "Front-End Development"],
+    skills: ["Flutter", "REST APIs", "Certificate Pinning", "Play Store", "App Store", "Fintech"],
     summary: "Leading development of MwananchiGo—a cross-platform Flutter lending app—from Figma designs through Play Store and App Store release, with secure API integrations and compliance-focused financial workflows.",
     achievements: [
       "Developed MwananchiGo from Figma designs into a fully functional cross-platform mobile application using Flutter.",
@@ -258,6 +238,59 @@ const experiences = ref([
     ]
   },
   {
+    startYear: 2025,
+    startMonth: 2,
+    isActive: true,
+    title: "Software Engineer",
+    company: "Suluhu Fintech",
+    employmentType: "Full-time",
+    workMode: "Remote",
+    location: "Nairobi County, Kenya",
+    skills: ["Flutter", "Figma", "Fintech", "Admin Panel"],
+    summary: "Building a new Flutter fintech application and maintaining the WapiPay admin panel—bug fixes, code quality, and product delivery for Lending-as-a-Service infrastructure.",
+    achievements: [
+      "Responsible for bug fixing and code cleaning on the WapiPay admin panel (wapipay.com).",
+      "Developing a new fintech application with Flutter, Figma, and supporting services (work in progress)."
+    ]
+  },
+  {
+    startYear: 2025,
+    startMonth: 11,
+    endYear: 2026,
+    endMonth: 10,
+    isActive: false,
+    title: "Lead Mobile Engineer",
+    company: "Verido",
+    employmentType: "Full-time",
+    workMode: "Remote",
+    location: "London Area, United Kingdom",
+    skills: ["Flutter", "OpenAI Realtime", "AI", "Zipy", "APIs"],
+    summary: "Led Verido’s mobile product with AI voice agents, data insights, platform stability, and UI modernization for micro-business operations.",
+    achievements: [
+      "Integrated an AI-powered real-time voice agent using OpenAI Realtime APIs, enabling multilingual voice-based data capture and conversational responses (40% improvement in sales process efficiency).",
+      "Implemented an AI-driven data analysis and insights engine for transactional and operational data (15% improvement in operational decision-making).",
+      "Resolved critical application access and stability issues, fully restoring platform availability (100% increase in active app usage).",
+      "Redesigned and modernized the UI, leading to 10% increase in user retention.",
+      "Led end-to-end integration of backend services and third-party APIs.",
+      "Introduced an intelligent auto-upgrade and notification system (25% reduction in version fragmentation, 10% decrease in user-reported issues).",
+      "Integrated Zipy performance monitoring and crash analytics (30% reduction in crash rates, 20% improvement in MTTR)."
+    ]
+  },
+  {
+    startYear: 2025,
+    startMonth: 7,
+    endYear: 2026,
+    endMonth: 5,
+    isActive: false,
+    title: "Software Engineer",
+    company: "ProDG Studio",
+    employmentType: "Part-time",
+    workMode: "Remote",
+    location: "London Area, United Kingdom",
+    summary: "Combined advanced software development, strategic insights, and business support to drive digital transformation and venture success for organizations worldwide.",
+    achievements: []
+  },
+  {
     startYear: 2024,
     startMonth: 5,
     endYear: 2026,
@@ -268,7 +301,8 @@ const experiences = ref([
     employmentType: "Full-time",
     workMode: "On-site",
     location: "Nairobi County, Kenya",
-    summary: "Spearheading mobile application development and eTIMS integration solutions. Leading the iSale POS product from development through Play Store launch and ongoing compliance and platform improvements.",
+    skills: ["Kotlin", "Flutter", "POS", "KRA eTIMS", "Node.js"],
+    summary: "Led iSale POS and eTIMS integration—from Kotlin POS systems and Play Store launch to Flutter v2, KRA compliance, and website performance.",
     achievements: [
       "Spearheaded the development and Play Store launch of the iSale POS app, expanding accessibility from manual sharing to nationwide and global availability resulting in a 100% increase in customer acquisition.",
       "Built and deployed the iSale Sales Management POS system using Kotlin, enabling 8% of Kenyan businesses to meet KRA compliance requirements.",
@@ -283,74 +317,38 @@ const experiences = ref([
     ]
   },
   {
-    startYear: 2025,
-    startMonth: 7,
-    endYear: 2026,
-    endMonth: 5,
-    isActive: false,
-    title: "Software Engineer",
-    company: "ProDG Studio",
-    employmentType: "Part-time",
-    workMode: "Remote",
-    location: "London Area, United Kingdom",
-    summary: "We combine advanced software development, strategic insights, and comprehensive business support to drive digital transformation and venture success for leading organizations around the world.",
-    achievements: []
-  },
-  {
-    startYear: 2025,
-    startMonth: 1,
-    endYear: 2025,
-    endMonth: 8,
-    isActive: false,
-    title: "Frontend Developer and Software Development Instructor",
-    company: "Polycrest Africa",
-    employmentType: "Full-time",
-    workMode: "Remote",
-    location: "Kenya",
-    summary: "Leading software development instruction and mentoring aspiring developers. Contributing to curriculum development and hands-on training in modern web technologies. Fostering innovation and excellence in game design, animation, and software development.",
-    achievements: []
-  },
-  {
-    startYear: 2025,
-    startMonth: 1,
-    endYear: 2026,
-    endMonth: 1,
-    isActive: false,
-    title: "Frontend Developer",
-    company: "GameTribe",
-    employmentType: "Full-time",
-    workMode: "Remote",
-    location: "Kenya",
-    summary: "Developing and maintaining web applications using modern frontend technologies. Contributing to the gaming platform's user interface and experience. Collaborating with the team to implement new features and improve existing functionality.",
-    achievements: []
-  },
-  {
-    startYear: 2023,
-    startMonth: 10,
-    endYear: 2025,
-    endMonth: 8,
-    isActive: false,
-    title: "Software Engineer Volunteer",
-    company: "Indie Games Group Kenya",
-    employmentType: "Part-time",
-    workMode: "Remote",
-    location: "Kenya",
-    summary: "Contributing to the gaming community through technical mentorship and development support. Participating in knowledge sharing sessions and helping developers improve their mobile game development skills.",
-    achievements: []
-  },
-  {
-    startYear: 2023,
+    startYear: 2024,
     startMonth: 5,
-    endYear: 2023,
-    endMonth: 11,
+    endYear: 2025,
+    endMonth: 8,
     isActive: false,
-    title: "Android Developer",
+    title: "Android Engineer",
     company: "Suluhu Fintech",
     employmentType: "Full-time",
     workMode: "On-site",
-    location: "Nairobi, Kenya",
-    summary: "Developed and maintained Android applications using Kotlin. Implemented secure financial features and integrated payment systems. Created innovative solutions for MSMEs to offer embedded finance options.",
+    location: "Nairobi County, Kenya",
+    skills: ["Kotlin", "Android", "Embedded Finance"],
+    summary: "Built Android solutions for MSMEs on Suluhu’s Lending-as-a-Service infrastructure—targeted embedded finance options with secure, production-ready mobile experiences.",
     achievements: []
+  },
+  {
+    startYear: 2024,
+    startMonth: 10,
+    endYear: 2024,
+    endMonth: 11,
+    isActive: false,
+    title: "Software Engineer",
+    company: "KitokoPay",
+    employmentType: "Contract",
+    workMode: "Remote",
+    location: "Democratic Republic of Congo",
+    skills: ["Flutter", "Figma", "Java APIs", "Payments"],
+    summary: "Led Flutter frontend for KitokoPay—translating Figma into production UI and integrating Java backend APIs for secure digital payments across platforms.",
+    achievements: [
+      "Led Flutter frontend development for KitokoPay, translating Figma designs into production-ready UI.",
+      "Integrated Java-based backend APIs to deliver secure and seamless digital payment experiences.",
+      "Improved app responsiveness and usability across multiple platforms."
+    ]
   },
   {
     startYear: 2023,
@@ -358,12 +356,12 @@ const experiences = ref([
     endYear: 2023,
     endMonth: 8,
     isActive: false,
-    title: "Project Assistant Intern",
+    title: "Project Assistant",
     company: "Kenya Trade Network Agency (KenTrade)",
     employmentType: "Full-time",
     workMode: "On-site",
     location: "Nairobi County, Kenya",
-    summary: "Contributed to the development and maintenance of the Kenya TradeNet System. Assisted in implementing electronic document processing and payment systems. Collaborated with the team to improve system efficiency and user experience.",
+    summary: "Supported Kenya TradeNet projects that improve trade in Kenya and across borders—electronic document processing and payment workflows.",
     achievements: []
   },
 ])

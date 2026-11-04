@@ -7,10 +7,10 @@
     </div>
 
     <!-- Footer -->
-    <footer class="bg-gray-900 text-white py-8 px-4">
+    <footer class="bg-gray-950 text-white py-8 px-4">
       <div class="max-w-6xl mx-auto flex flex-col sm:flex-row justify-between items-center">
-        <div class="text-sm mb-4 sm:mb-0">
-          © Copyright {{ currentYear }} - Geoffrey Erastus
+        <div class="text-sm text-gray-400 mb-4 sm:mb-0">
+          © {{ currentYear }} Geoffrey Erastus · Mobile & Cross-Platform Software Engineer
         </div>
         <div class="flex gap-6" role="list">
           <a

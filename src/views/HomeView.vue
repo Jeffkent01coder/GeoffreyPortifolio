@@ -8,11 +8,11 @@
   <section id="experience" class="scroll-mt-24" aria-labelledby="experience-heading">
     <ExperienceSection />
   </section>
-  <section id="skills" class="scroll-mt-24" aria-labelledby="experience-stats-heading">
-    <ExperienceStats />
-  </section>
   <section id="latestWork" class="scroll-mt-24" aria-labelledby="latest-work-heading">
     <latestWork />
+  </section>
+  <section id="skills" class="scroll-mt-24" aria-labelledby="experience-stats-heading">
+    <ExperienceStats />
   </section>
   <section class="scroll-mt-24" aria-labelledby="testimonials-heading">
     <Testimonial />

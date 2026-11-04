@@ -46,28 +46,28 @@
   
   const testimonials = ref([
     {
-      name: 'Munga Fredrick',
-      title: 'Software and game development instructor',
-      avatar: '/images/fred.jpeg',  // Adjusted for larger image size
-      comment: "Erastus is a software developer with a difference. With a keen eye for detail and purpose, he ensures that every application he builds is both efficient and user-centric. He prioritizes speed, accuracy, and an intuitive UI, delivering seamless experiences across both mobile and web applications. By understanding customer needs, he crafts software solutions that are not only functional but also outstanding in performance and design."
-    },
-    {
       name: 'Victor Ngure',
       title: 'Software engineer at Huwawei',
       avatar: '/images/vic.jpeg',
       comment: "Jeff is a mobile app developer with a sharp focus on UI design and seamless integrations in Kotlin and Flutter. His attention to detail ensures that every app he builds is fast, accurate, and highly intuitive, creating a smooth user experience. He specializes in developing and integrating mobile applications that align with customer needs, ensuring both functionality and aesthetic excellence. Whether working on Android (Kotlin) or cross-platform (Flutter), he delivers high-performance solutions with a refined user interface."
     },
     {
-      name: 'Wachira Maina',
-      title: 'Sales & Marketing Consultant',
-      avatar: '/images/wachira_maina.jpg',
-      comment: "I highly recommend Geoffrey Erastus for his outstanding skills as a mobile app developer specializing in Kotlin, Figma and Flutter. Geoffrey consistently demonstrates a keen eye for UI design, seamless integrations, and user experience optimization. His ability to transform ideas into intuitive, high-performance applications sets him apart. He is highly professional, delivers on time, and adapts effortlessly to project requirements. His expertise in building and integrating mobile applications has significantly enhanced our digital experience. Geoffrey’s dedication to quality and innovation makes him an invaluable asset to any development team."
-    },
-    {
       name: 'Paul Njoroge',
       title: 'Senior Android Engineer at Letshego',
       avatar: '/images/paul.jpeg',
       comment: "Jeff is a Kotlin mobile app developer with a strong focus on UI design and seamless integrations. His keen attention to detail ensures that every Android app he develops is fast, efficient, and highly intuitive, providing users with a smooth and engaging experience. Jeff specializes in building and integrating feature-rich mobile applications tailored to customer needs, balancing functionality and aesthetic appeal. His expertise in Kotlin development allows him to create high-performance Android solutions with a refined and user-friendly interface."
+    },
+    {
+      name: 'Munga Fredrick',
+      title: 'Software and game development instructor',
+      avatar: '/images/fred.jpeg',
+      comment: "Erastus is a software developer with a difference. With a keen eye for detail and purpose, he ensures that every application he builds is both efficient and user-centric. He prioritizes speed, accuracy, and an intuitive UI, delivering seamless experiences across both mobile and web applications. By understanding customer needs, he crafts software solutions that are not only functional but also outstanding in performance and design."
+    },
+    {
+      name: 'Wachira Maina',
+      title: 'Sales & Marketing Consultant',
+      avatar: '/images/wachira_maina.jpg',
+      comment: "I highly recommend Geoffrey Erastus for his outstanding skills as a mobile app developer specializing in Kotlin, Figma and Flutter. Geoffrey consistently demonstrates a keen eye for UI design, seamless integrations, and user experience optimization. His ability to transform ideas into intuitive, high-performance applications sets him apart. He is highly professional, delivers on time, and adapts effortlessly to project requirements. His expertise in building and integrating mobile applications has significantly enhanced our digital experience. Geoffrey’s dedication to quality and innovation makes him an invaluable asset to any development team."
     },
   ])
   </script>
