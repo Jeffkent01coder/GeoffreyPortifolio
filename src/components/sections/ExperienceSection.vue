@@ -7,6 +7,7 @@
           Experience & Resume
           <span class="section-heading-accent"></span>
         </h2>
+        <!-- Download CV temporarily disabled
         <a
           href="/docs/GEOFFREY%20ERASTUS%20WAMBAYA%20Resume.docx.pdf"
           download="GEOFFREY ERASTUS WAMBAYA Resume.pdf"
@@ -17,6 +18,7 @@
           </svg>
           Download CV
         </a>
+        -->
       </div>
 
       <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-12">
@@ -220,14 +222,15 @@ const experiences = ref([
     startMonth: 6,
     isActive: true,
     title: "Lead Mobile Engineer",
-    company: "Mwananchi Credit Limited",
+    company: "MwananchiGo",
     employmentType: "Contract",
     workMode: "Remote",
     location: "Nairobi County, Kenya",
     skills: ["Flutter", "REST APIs", "Certificate Pinning", "Play Store", "App Store", "Fintech"],
-    summary: "Leading development of MwananchiGo—a cross-platform Flutter lending app—from Figma designs through Play Store and App Store release, with secure API integrations and compliance-focused financial workflows.",
+    summary: "Leading development of MwananchiGo (mwananchigo.com)—a cross-platform Flutter lending app for logbook, title deed, and check-off loans—from Figma through Play Store and App Store release, with secure APIs and compliance-focused financial workflows.",
     achievements: [
       "Developed MwananchiGo from Figma designs into a fully functional cross-platform mobile application using Flutter.",
+      "Built a mobile-first lending experience covering logbook, title deed, and check-off loan products with a fast application flow.",
       "Integrated RESTful APIs for loan applications, user authentication, account management, and real-time financial transactions.",
       "Implemented secure certificate pinning and mobile security best practices to protect API communication and sensitive user data.",
       "Built responsive and scalable UI components optimized for both Android and iOS platforms.",

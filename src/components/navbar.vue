@@ -23,6 +23,7 @@
           >
             {{ item.name }}
           </a>
+          <!-- Resume temporarily disabled
           <a
             href="/docs/GEOFFREY%20ERASTUS%20WAMBAYA%20Resume.docx.pdf"
             download="GEOFFREY ERASTUS WAMBAYA Resume.pdf"
@@ -30,17 +31,11 @@
           >
             Resume
           </a>
+          -->
         </div>
 
         <!-- Mobile menu button -->
         <div class="md:hidden flex items-center gap-2">
-          <a
-            href="/docs/GEOFFREY%20ERASTUS%20WAMBAYA%20Resume.docx.pdf"
-            download="GEOFFREY ERASTUS WAMBAYA Resume.pdf"
-            class="px-3 py-2 text-sm font-medium text-primary-400 hover:text-primary-300 transition-colors"
-          >
-            Resume
-          </a>
           <button
             type="button"
             class="inline-flex items-center justify-center p-2 rounded-lg text-gray-400 hover:text-white hover:bg-gray-800 transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-primary-500 focus-visible:ring-offset-2 focus-visible:ring-offset-gray-900"
@@ -127,16 +122,7 @@
             </a>
           </nav>
 
-          <div class="p-4 border-t border-gray-800">
-            <a
-              href="/docs/GEOFFREY%20ERASTUS%20WAMBAYA%20Resume.docx.pdf"
-              download="GEOFFREY ERASTUS WAMBAYA Resume.pdf"
-              class="flex w-full items-center justify-center rounded-xl bg-primary-500 px-4 py-3 text-sm font-semibold text-white transition-colors hover:bg-primary-600"
-              @click="closeMenu"
-            >
-              Download Resume
-            </a>
-          </div>
+          <!-- Download Resume temporarily disabled -->
         </aside>
       </Transition>
     </Teleport>

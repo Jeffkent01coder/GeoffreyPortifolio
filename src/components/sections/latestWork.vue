@@ -282,18 +282,18 @@ const projects = ref([
   },
   {
     title: 'MwananchiGo',
-    description: 'Flutter mobile lending app for Mwananchi Credit Limited—loan applications, secure transactions, and account management. Published on Google Play.',
+    description: 'Flutter lending app for fast, straightforward mobile loans—logbook, title deed, and check-off products with a clean application flow. Live at mwananchigo.com and on the app stores.',
     images: ['/images/mwananchigo.png'],
     videoUrl: null,
-    fullDescription: 'Developed MwananchiGo from Figma designs into a fully functional cross-platform mobile application using Flutter for Mwananchi Credit Limited. Integrated RESTful APIs for loan applications, user authentication, account management, and real-time financial transactions. Implemented secure certificate pinning and mobile security best practices, built responsive UI for Android and iOS, and managed deployment to Google Play Store and Apple App Store. Loans are offered with a repayment period of 3 months, supporting secure digital lending operations. Tech: Flutter, REST APIs, cross-platform development, certificate pinning, system deployment.',
-    client: 'Mwananchi Credit Limited',
-    type: 'Mobile App · Flutter',
+    fullDescription: 'Developed MwananchiGo from Figma into a fully functional cross-platform Flutter lending app. Customers explore loan options (logbook, title deed, check-off), start applications quickly, track progress, and get guided next steps—backed by secure REST APIs, certificate pinning, and Play Store / App Store releases. Also available via USSD *684#. Product site: mwananchigo.com. Tech: Flutter, REST APIs, cross-platform, certificate pinning, fintech.',
+    client: 'MwananchiGo',
+    type: 'Mobile App · Flutter · Fintech',
     year: 'Jun 2025 – Present',
-    previewUrl: 'https://play.google.com/store/apps/details?id=com.mwananchigo.app&hl=en_US',
-    polycrest: 'https://play.google.com/store/apps/details?id=com.mwananchigo.app&hl=en_US',
-    previewLabel: 'Google Play',
-    quote: 'Loans are offered with a repayment period of 3 months. Maximum APR is 96% per annum, with a one-time processing fee of 2%.',
-    quoteAuthor: 'Google Play'
+    previewUrl: 'https://mwananchigo.com/',
+    polycrest: 'https://mwananchigo.com/',
+    previewLabel: 'Website',
+    quote: 'Fast, straightforward loans from a mobile experience that feels easy to trust.',
+    quoteAuthor: 'MwananchiGo'
   },
   {
     title: 'Verido',
